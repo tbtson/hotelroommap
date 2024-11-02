@@ -77,21 +77,5 @@ function filterGuests() {
     }
 }
 
-function updateRoomStatus() {
-    
-    const roomCards = document.querySelectorAll('.room__card');
-
-    roomCards.forEach(card => {
-        
-        const roomNumber = card.id || card.textContent;
-
-        if (bookedRooms.includes(roomNumber)) {
-            card.style.border = "2px solid red";
-        }
-        else{
-            card.style.border = "2px solid green";
-        }
-    });
-}
 
 document.addEventListener("DOMContentLoaded", updateRoomStatus);
