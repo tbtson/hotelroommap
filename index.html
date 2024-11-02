@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel California Roommap</title>
+    <link rel="stylesheet" href="roommap.css">
+</head>
+<body>
+    <header>
+        <h1>Hotel Management System</h1>
+    </header>
+    <main>
+        <h2>Room Map</h2>
+        <div class="room__map">
+            <div class="room__card" id="room301">301</div>
+            <div class="room__card">302</div>
+            <div class="room__card">303</div>
+            <div class="room__card">304</div>
+            <div class="room__card">305</div>
+            <div class="room__card">306</div>
+            <div class="room__card">307</div>
+            <div class="room__card">401</div>
+            <div class="room__card">402</div>
+            <div class="room__card">403</div>
+            <div class="room__card">404</div>
+            <div class="room__card">405</div>
+            <div class="room__card">406</div>
+            <div class="room__card">407</div>
+
+            <div class="footnote">
+                <div class="available">Available</div>
+                <div class="booked">Booked</div>
+            </div>
+        </div>
+
+        <div class="add" id="show-form">
+            <button>Add New Reservation</button>
+        </div>
+
+        <div class="popup">
+            <div class="close-btn">&times;</div>
+            <div class="form">
+                <h2>Enter New Guest Reservation</h2>
+                <form id="guestForm">
+                <div class="form-element">
+                    <label for="name">Full Name</label>
+                    <input type="text" placeholder="Enter full name" id="name" required>
+                </div>
+                <div class="form-element"><label for="email">Email</label>
+                    <input type="email" placeholder="Enter your email" id="email" required>
+                </div>
+                <div class="form-element">
+                    <label for="num">Number</label>
+                    <input type="text" placeholder="Enter phone number" id="num" required>
+                </div>
+                <div class="form-element">
+                    <label for="checkin">Check-in Date:</label>
+                    <input type="date" name="" id="datein" required>
+                </div>
+                <div class="form-element">
+                    <label for="checkout">Check-out Date:</label>
+                    <input type="date" name="" id="dateout" required>
+                </div>
+                <div class="form-element">
+                    <label for="roomtype">Room Type</label>
+                  
+                    <select name="roomtype" id="roomtype">
+                      <option value="deluxe">Deluxe Room</option>
+                      <option value="standard">Standard Room</option>
+                      <option value="suite">Suite</option>
+                    </select>
+                </div>
+                <div class="form-element">
+                    <label for="roomnnum">Assign Room</label>
+                    <select name="roomnum" id="roomNumber">
+                        <option value="301">301</option>
+                        <option value="302">302</option>
+                        <option value="303">303</option>
+                        <option value="304">304</option>
+                        <option value="305">305</option>
+                        <option value="306">306</option>
+                        <option value="307">307</option>
+                        <option value="401">401</option>
+                        <option value="402">402</option>
+                        <option value="403">403</option>
+                        <option value="404">404</option>
+                        <option value="405">405</option>
+                        <option value="406">406</option>
+                        <option value="407">407</option>
+                    </select>
+                </div>
+                <div class="form-element">
+                    <button type="submit">Add Reservation</button>
+                </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="guestlist"><h2>Guest List</h2>
+            <input type="text" id="searchInput" placeholder="Search by name..." onkeyup="filterGuests()">
+            <table id="guestTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Number</th>
+                        <th>Check-in Date</th>
+                        <th>Check-out Date</th>
+                        <th>Room Type</th>
+                        <th>Room Number</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+    <script src="roommap.js"></script>
+</body>
+</html>
